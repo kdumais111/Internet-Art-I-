@@ -6,13 +6,23 @@
   const gifURL = 'AnimTrainDivider.gif'
   // replace this with a color that compliments your GIF
   const bgColor = '#e585ca'
-  
+  function createGif(x,y,w,h,url) {
+    nn.create('img')
+      .set({src:url}).css({}) // changes an objects attributes
+    // could also be then gif.set instead
+    // if line is a start of dot, will interpret as line before it
+      .css({ position: 'absolute',
+            left : x + 'px',
+            top: '${y}px'
+      })
+  }
   function setup () {
   // css query selector 
-  nn.get('body')
+  const b = nn.get('body')
   // can write backgroundColor in camelcase instead. 
   const style= {'background-color':bgColor, 
                 'font-size': '24 px'}
+  createGif(100,300,140,140, gifURL)
   b.css(style)}
   
 // setup goes on load
