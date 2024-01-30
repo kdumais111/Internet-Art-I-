@@ -3,12 +3,20 @@
   /* global nn */
   
   // replace this with your own GIF
-  const gifURL = 'https://netart.rocks/images/butterfly.gif'
+  const gifURL = 'AnimTrainDivider.gif'
   // replace this with a color that compliments your GIF
   const bgColor = '#e585ca'
   
+  function setup () {
+  // css query selector 
+  nn.get('body')
+  // can write backgroundColor in camelcase instead. 
+  const style= {'background-color':bgColor, 
+                'font-size': '24 px'}
+  b.css(style)}
+  
+// setup goes on load
+nn.on('load', setup)
 </script>
 
 <img src="AnimTrainDivider.gif">
-const gifURL= "AnimTrainDivider.gif"
-const bgoOlor= 'e585ca'
